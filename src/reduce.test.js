@@ -11,9 +11,15 @@ describe('reduce', () => {
     delete Array.prototype.reduce2;
   });
 
-  it('should ', () => {
+  it('should return the sum of array elements', () => {
+    const result = [1, 2, 3].reduce2((acc, val) => acc + val, 0);
 
+    expect(result).toBe(6);
   });
 
-  // Add tests here
+  it('should concatenate strings', () => {
+    const result = ['Hello', ' ', 'world'].reduce2((acc, val) => acc + val, '');
+
+    expect(result).toBe('Hello world');
+  });
 });
